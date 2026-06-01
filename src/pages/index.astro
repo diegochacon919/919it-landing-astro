@@ -1,0 +1,666 @@
+<!-- ============================================================
+     🏠 919IT LLC — Dark Mode Landing Page
+     Contenedor 880px · Fondo #0f1419 · Cyan accent #00b4d8
+     ============================================================ -->
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<BaseLayout>
+  <Navbar slot="nav" />
+
+  <!-- ============================================================
+       🦸 HERO — Dark, logo, cyan accent
+       ============================================================ -->
+  <header class="hero">
+    <div class="hero__grid"></div>
+    <div class="container hero__content">
+      <img class="hero__logo" src="/logo.png" alt="919it LLC" />
+      <h1><strong>919</strong> IT CONSULTING</h1>
+      <p class="hero__tagline">Senior SDET · QA Automation · CI/CD</p>
+      <p class="hero__desc">
+        US-based QA consultancy.<br />We build test frameworks that ship faster and break less.
+      </p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn-primary">Start a Project</a>
+        <a href="#services" class="btn-ghost">See Services ↓</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       📋 ABOUT
+       ============================================================ -->
+  <section id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__text">
+          <span class="section-label">About</span>
+          <h2>Engineered<br />for Scale.</h2>
+          <p>
+            <strong>919it LLC</strong> is a QA automation consultancy founded by a Senior SDET
+            with 10+ years of experience designing test frameworks for web, mobile, and OTT platforms.
+          </p>
+          <p>
+            We don't just write tests — we architect <strong>quality pipelines</strong> that
+            catch bugs before your users do.
+          </p>
+          <div class="about__highlights">
+            <span>🇺🇸 US-Based LLC</span>
+            <span>🏦 Banking & Streaming</span>
+            <span>📱 Mobile + OTT</span>
+            <span>⚡ B2B Ready</span>
+          </div>
+        </div>
+        <div class="about__stats">
+          <div class="stat-card">
+            <div class="stat-card__number">10<span>+</span></div>
+            <div class="stat-card__label">Years in QA</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__number">4</div>
+            <div class="stat-card__label">Industries</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__number">2000<span>+</span></div>
+            <div class="stat-card__label">Test Cases</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__number">15<span>+</span></div>
+            <div class="stat-card__label">Platforms</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       🛠️ SERVICES
+       ============================================================ -->
+  <section id="services" class="section-alt">
+    <div class="container">
+      <div class="section-centered">
+        <span class="section-label">Services</span>
+        <h2>What We Do</h2>
+        <p class="section-subtitle">End-to-end QA services for engineering teams that ship.</p>
+      </div>
+      <div class="services__grid">
+        <div class="service-card">
+          <div class="service-card__icon">🧪</div>
+          <h3>Test Automation</h3>
+          <p>Custom frameworks with Playwright, WebdriverIO, or Selenium. E2E, integration, and API testing for maintainability.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">⚡</div>
+          <h3>CI/CD Pipelines</h3>
+          <p>Azure DevOps & GitHub Actions. Parallel execution, Allure + TestRail reporting. Tests on every PR.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">📱</div>
+          <h3>Mobile &amp; OTT</h3>
+          <p>Real-device testing for iOS, Android, Samsung TV (Tizen), Roku, LG, Hisense. Appium + Firebase + NPAW.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">🔍</div>
+          <h3>API Contracts</h3>
+          <p>OpenAPI (Swagger), SoapUI. Contract testing across microservices and third-party integrations.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">📊</div>
+          <h3>Performance</h3>
+          <p>Load & stress testing with K6. Find bottlenecks before production. p95, throughput, error rate analysis.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">🔧</div>
+          <h3>QA Audit</h3>
+          <p>Coverage gap analysis, flaky test detection, strategy optimization — complete QA lifecycle diagnostic.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       💼 TECH STACK
+       ============================================================ -->
+  <section id="stack">
+    <div class="container">
+      <div class="section-centered">
+        <span class="section-label">Tech Stack</span>
+        <h2>Modern tools.<br />Modern teams.</h2>
+      </div>
+      <div class="stack__grid">
+        <div class="stack-cat">
+          <h3>🧪 Automation &amp; Testing</h3>
+          <div><span class="badge">Playwright</span><span class="badge">WebdriverIO</span><span class="badge">Selenium</span><span class="badge">Appium</span><span class="badge">UiPath (RPA)</span><span class="badge">TestRail</span><span class="badge">Cucumber / Gherkin</span></div>
+        </div>
+        <div class="stack-cat">
+          <h3>💻 Languages</h3>
+          <div><span class="badge">TypeScript</span><span class="badge">JavaScript</span><span class="badge">Python</span></div>
+        </div>
+        <div class="stack-cat">
+          <h3>⚙️ CI/CD &amp; Tools</h3>
+          <div><span class="badge">Azure DevOps</span><span class="badge">GitHub Actions</span><span class="badge">Jira</span><span class="badge">Allure Reports</span><span class="badge">LambdaTest</span><span class="badge">BrowserStack</span></div>
+        </div>
+        <div class="stack-cat">
+          <h3>🔌 APIs &amp; Data</h3>
+          <div><span class="badge">OpenAPI / Swagger</span><span class="badge">SoapUI</span><span class="badge">K6</span><span class="badge">MySQL / SQL Server</span><span class="badge">MongoDB</span><span class="badge">ETL</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       👔 EXPERIENCE
+       ============================================================ -->
+  <section id="experience" class="section-alt">
+    <div class="container">
+      <div class="section-centered">
+        <span class="section-label">Experience</span>
+        <h2>10+ years.<br />4 industries.</h2>
+      </div>
+      <div class="exp__timeline">
+        <div class="exp-item">
+          <div class="exp-item__marker"><div class="exp-item__dot"></div></div>
+          <div class="exp-item__body">
+            <div class="exp-item__date">Jul 2025 – Present</div>
+            <div class="exp-item__role">SDET Engineer</div>
+            <div class="exp-item__company">Monks · Streaming</div>
+            <p class="exp-item__desc">Architected automation frameworks for Ditu TV across 7 platforms using WebdriverIO + TypeScript. NPAW video analytics validation.</p>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-item__marker"><div class="exp-item__dot"></div></div>
+          <div class="exp-item__body">
+            <div class="exp-item__date">Aug 2022 – Jun 2025</div>
+            <div class="exp-item__role">Founder & Principal SDET</div>
+            <div class="exp-item__company">919it LLC · Banking</div>
+            <p class="exp-item__desc">Playwright + Gherkin suites. Optimized Azure DevOps pipelines. Reduced regression feedback loops by 60%.</p>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-item__marker"><div class="exp-item__dot"></div></div>
+          <div class="exp-item__body">
+            <div class="exp-item__date">Mar 2020 – Feb 2022</div>
+            <div class="exp-item__role">Senior QA Engineer</div>
+            <div class="exp-item__company">CTI Consulting · E-commerce — Miami</div>
+            <p class="exp-item__desc">Selenium/Python + Appium automation. Led UAT with international stakeholders.</p>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-item__marker"><div class="exp-item__dot"></div></div>
+          <div class="exp-item__body">
+            <div class="exp-item__date">2010 – 2020</div>
+            <div class="exp-item__role">QA Engineer → Senior QA Engineer</div>
+            <div class="exp-item__company">Speeron, Software One — Colombia & Sweden</div>
+            <p class="exp-item__desc">E2E testing: POS, e-commerce payments, healthcare, telecom, data warehouse. RPA with UiPath.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       📬 CONTACT
+       ============================================================ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-centered">
+        <span class="section-label">Contact</span>
+        <h2>Let's Work<br />Together.</h2>
+        <p class="section-subtitle">US-based LLC, Colombia-based talent. Best of both worlds.</p>
+      </div>
+      <div class="contact__grid">
+        <div class="contact__info">
+          <div class="contact__card">📧 <div><strong>Email</strong><span>diego.chacon@919itllc.com</span></div></div>
+          <div class="contact__card">📱 <div><strong>Phone</strong><span>+57 310 482 3098</span></div></div>
+          <div class="contact__card">🌐 <div><strong>LinkedIn</strong><a href="https://linkedin.com/in/dchacon130">/in/dchacon130</a></div></div>
+          <div class="contact__card">🐙 <div><strong>GitHub</strong><a href="https://github.com/diegochacon919">/diegochacon919</a></div></div>
+          <div class="contact__us-badge">🇺🇸 919it LLC · Delaware, USA · B2B Ready</div>
+        </div>
+        <ContactForm />
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>
+
+<style>
+  /* ============================================================
+     HERO
+     ============================================================ */
+  .hero {
+    position: relative;
+    padding: 200px 0 140px;
+    background: var(--bg-base);
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero__grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(rgba(0, 180, 216, 0.05) 1px, transparent 1px),
+      radial-gradient(rgba(26, 54, 93, 0.08) 1px, transparent 1px);
+    background-size: 40px 40px, 80px 80px;
+    background-position: 0 0, 20px 20px;
+  }
+
+  .hero__content { position: relative; z-index: 1; }
+
+  .hero__logo { width: 72px; margin-bottom: 40px; opacity: 0.92; }
+
+  .hero h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: -0.8px;
+    margin-bottom: 16px;
+    line-height: 1.15;
+  }
+
+  .hero h1 strong { color: var(--accent); }
+
+  .hero__tagline {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--accent);
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+  }
+
+  .hero__tagline span { opacity: 0.4; color: var(--text-muted); }
+
+  .hero__desc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 48px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-ghost {
+    display: inline-block;
+    padding: 14px 34px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.88rem;
+    border: 1.5px solid var(--border-strong);
+    border-radius: 8px;
+    transition: all 0.25s ease;
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-dim);
+  }
+
+  /* ============================================================
+     ABOUT
+     ============================================================ */
+  .about__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+  }
+
+  .about__text p {
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    font-size: 0.98rem;
+    line-height: 1.8;
+  }
+
+  .about__text strong { color: var(--text-main); }
+
+  .about__highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 26px;
+  }
+
+  .about__highlights span {
+    padding: 8px 16px;
+    background: var(--accent-dim);
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 600;
+    border-radius: 6px;
+    border: 1px solid var(--border-accent);
+  }
+
+  .about__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .stat-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 36px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .stat-card:hover::before { opacity: 1; }
+
+  .stat-card:hover {
+    border-color: var(--border-accent);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .stat-card__number {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+
+  .stat-card__number span { color: var(--accent); font-weight: 700; }
+
+  .stat-card__label {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-top: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+  }
+
+  /* ============================================================
+     SERVICES
+     ============================================================ */
+  .services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 52px;
+  }
+
+  .service-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 38px 26px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .service-card::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease;
+    pointer-events: none;
+  }
+
+  .service-card:hover {
+    border-color: var(--border-accent);
+    box-shadow: var(--shadow-md), var(--shadow-glow);
+    transform: translateY(-3px);
+  }
+
+  .service-card__icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-dim);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+  }
+
+  .service-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.02rem;
+    margin-bottom: 10px;
+    color: var(--text-main);
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+
+  .service-card p {
+    color: var(--text-muted);
+    font-size: 0.87rem;
+    line-height: 1.7;
+  }
+
+  /* ============================================================
+     TECH STACK
+     ============================================================ */
+  .stack__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 44px;
+    margin-top: 52px;
+  }
+
+  .stack-cat h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-light);
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* ============================================================
+     EXPERIENCE
+     ============================================================ */
+  .exp__timeline {
+    margin-top: 56px;
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .exp__timeline::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 4px;
+    bottom: 4px;
+    width: 1.5px;
+    background: linear-gradient(180deg, var(--accent), var(--primary), transparent);
+  }
+
+  .exp-item {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 30px;
+    padding-bottom: 48px;
+    position: relative;
+  }
+
+  .exp-item:last-child { padding-bottom: 0; }
+
+  .exp-item__marker {
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+  }
+
+  .exp-item__dot {
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 12px var(--accent-glow), 0 0 0 4px var(--accent-dim);
+  }
+
+  .exp-item__date {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    color: var(--accent);
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .exp-item__role {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-main);
+    margin-bottom: 3px;
+    letter-spacing: -0.3px;
+  }
+
+  .exp-item__company {
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.88rem;
+    margin-bottom: 8px;
+  }
+
+  .exp-item__desc {
+    color: var(--text-dim);
+    font-size: 0.87rem;
+    line-height: 1.7;
+  }
+
+  /* ============================================================
+     CONTACT
+     ============================================================ */
+  .contact__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 52px;
+    margin-top: 52px;
+  }
+
+  .contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact__card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 22px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    transition: all 0.25s ease;
+    font-size: 1.2rem;
+  }
+
+  .contact__card:hover {
+    border-color: var(--border-accent);
+    background: var(--bg-elevated);
+  }
+
+  .contact__card strong {
+    display: block;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-dim);
+    margin-bottom: 3px;
+  }
+
+  .contact__card span {
+    color: var(--text-main);
+    font-size: 0.88rem;
+    font-weight: 600;
+  }
+
+  .contact__card a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: opacity 0.2s;
+  }
+
+  .contact__card a:hover { opacity: 0.8; }
+
+  .contact__us-badge {
+    margin-top: 10px;
+    padding: 14px 22px;
+    background: var(--primary-ghost);
+    border: 1px solid rgba(26, 54, 93, 0.2);
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 0.82rem;
+    color: var(--text-main);
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+
+  /* ============================================================
+     MOBILE
+     ============================================================ */
+  @media (max-width: 768px) {
+    .hero { padding: 150px 0 88px; }
+    .hero h1 { font-size: 2.2rem; }
+    .hero__logo { width: 60px; }
+    .hero__desc { font-size: 1rem; }
+
+    .about__grid { grid-template-columns: 1fr; gap: 44px; }
+    .about__text h2 br { display: none; }
+    .services__grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+    .stack__grid { grid-template-columns: 1fr; gap: 32px; }
+    .contact__grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  @media (max-width: 480px) {
+    .hero { padding: 128px 0 64px; }
+    .hero h1 { font-size: 1.75rem; }
+    .hero__actions { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-ghost { width: 100%; text-align: center; }
+
+    .services__grid { grid-template-columns: 1fr; }
+    .service-card { padding: 28px 22px; }
+    .about__stats { gap: 10px; }
+    .stat-card { padding: 26px 14px; }
+    .stat-card__number { font-size: 2.1rem; }
+    .exp-item { gap: 16px; padding-bottom: 32px; }
+  }
+</style>

@@ -1,0 +1,120 @@
+<form id="contact-form" class="contact-form">
+  <div class="form-row">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+  </div>
+  <input type="text" name="company" placeholder="Company (optional)" />
+  <textarea name="message" placeholder="Tell me about your project, tech stack, and QA needs..." required></textarea>
+  <button type="submit" class="btn-primary form-submit">Send Message</button>
+  <div id="form-status" class="form-status" style="display:none;"></div>
+</form>
+
+<script>
+  const FORMSPREE_ID = 'CHANGE_ME';
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.style.display = 'block';
+    status.textContent = 'Sending...';
+    status.className = 'form-status form-status--sending';
+
+    const data = new FormData(form);
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      });
+      if (res.ok) {
+        status.textContent = 'Message sent! We will reply within 24h.';
+        status.className = 'form-status form-status--success';
+        form.reset();
+      } else {
+        const err = await res.json();
+        throw new Error(err.error || 'Something went wrong');
+      }
+    } catch (err) {
+      status.textContent = `${err.message}. Try again or email us directly.`;
+      status.className = 'form-status form-status--error';
+    }
+  });
+</script>
+
+<style>
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 15px 18px;
+    margin-bottom: 12px;
+    border: 1.5px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    background: var(--bg-surface);
+    color: var(--text-main);
+    transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+  }
+
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: var(--text-dim);
+    font-weight: 400;
+  }
+
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-dim);
+    background: var(--bg-elevated);
+  }
+
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 130px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 12px;
+    margin-bottom: 0;
+  }
+
+  .form-submit {
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  @media (max-width: 480px) {
+    .form-row { grid-template-columns: 1fr; }
+  }
+
+  .form-status {
+    margin-top: 14px;
+    padding: 13px 18px;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  .form-status--sending {
+    background: var(--accent-dim);
+    color: var(--accent);
+    border: 1px solid var(--border-accent);
+  }
+
+  .form-status--success {
+    background: rgba(72, 199, 142, 0.1);
+    color: #48c78e;
+    border: 1px solid rgba(72, 199, 142, 0.2);
+  }
+
+  .form-status--error {
+    background: rgba(240, 100, 100, 0.08);
+    color: #f06464;
+    border: 1px solid rgba(240, 100, 100, 0.15);
+  }
+</style>

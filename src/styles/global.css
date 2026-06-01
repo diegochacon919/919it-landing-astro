@@ -1,0 +1,175 @@
+/* ============================================================
+   919IT — Dark Mode Design System
+   Palette: #1a365d  #00b4d8  #f7fafc  #1a202c
+   Software company · QA consulting
+   ============================================================ */
+:root {
+  color-scheme: dark;
+
+  /* Brand */
+  --primary: #1a365d;
+  --primary-light: #234572;
+  --primary-ghost: rgba(26, 54, 93, 0.25);
+  --accent: #00b4d8;
+  --accent-dim: rgba(0, 180, 216, 0.12);
+  --accent-glow: rgba(0, 180, 216, 0.22);
+
+  /* Backgrounds — built from #1a202c */
+  --bg-base: #1a202c;
+  --bg-surface: #1f2a37;
+  --bg-elevated: #253242;
+  --bg-float: #2b3a4d;
+
+  /* Text — built from #f7fafc */
+  --text-main: #f7fafc;
+  --text-muted: rgba(247, 250, 252, 0.58);
+  --text-dim: rgba(247, 250, 252, 0.32);
+
+  /* Borders — #f7fafc at various opacities */
+  --border: rgba(247, 250, 252, 0.07);
+  --border-strong: rgba(247, 250, 252, 0.12);
+  --border-accent: rgba(0, 180, 216, 0.25);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 32px rgba(0, 180, 216, 0.08);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-main);
+  line-height: 1.6;
+  background-color: var(--bg-base);
+  background-image:
+    radial-gradient(circle, rgba(247, 250, 252, 0.025) 1px, transparent 1px),
+    radial-gradient(ellipse 80% 60% at 85% 5%, rgba(26, 54, 93, 0.35), transparent),
+    radial-gradient(ellipse 50% 45% at 15% 95%, rgba(0, 180, 216, 0.04), transparent),
+    radial-gradient(ellipse 60% 50% at 50% 50%, rgba(26, 54, 93, 0.12), transparent);
+  background-size:
+    22px 22px,
+    100% 100%,
+    100% 100%,
+    100% 100%;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+section {
+  padding: 112px 0;
+}
+
+.section-alt {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Typography */
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.6px;
+  line-height: 1.15;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.section-centered { text-align: center; }
+
+.section-subtitle {
+  font-size: 1.08rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-top: 14px;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+  padding: 7px 17px;
+  border-radius: 6px;
+  font-size: 0.83rem;
+  font-weight: 500;
+  margin: 4px;
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.badge:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  padding: 14px 34px;
+  background: var(--accent);
+  color: var(--bg-base);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.88rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: #00c8ee;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px var(--accent-glow);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container { padding: 0 24px; }
+  section { padding: 72px 0; }
+  h2 { font-size: 1.85rem; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 18px; }
+  section { padding: 56px 0; }
+  h2 { font-size: 1.55rem; }
+}

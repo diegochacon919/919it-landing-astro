@@ -1,0 +1,79 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <h4>919it LLC</h4>
+        <p>Senior SDET Consulting<br />QA Automation · CI/CD<br />Delaware, USA</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <p><a href="https://linkedin.com/in/dchacon130">LinkedIn</a></p>
+        <p><a href="https://github.com/diegochacon919">GitHub</a></p>
+        <p><a href="mailto:diego.chacon@919itllc.com">Email</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <p><a href="#services">Test Automation</a></p>
+        <p><a href="#services">CI/CD Integration</a></p>
+        <p><a href="#services">QA Audit</a></p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      &copy; 2026 919it LLC. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--bg-base);
+    color: var(--text-dim);
+    padding: 64px 0 32px;
+    font-size: 0.88rem;
+    border-top: 1px solid var(--border-strong);
+  }
+
+  .footer__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 52px;
+  }
+
+  .footer h4 {
+    font-family: 'Inter', sans-serif;
+    color: var(--accent);
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    margin-bottom: 22px;
+    font-weight: 700;
+  }
+
+  .footer p {
+    color: var(--text-dim);
+    line-height: 2;
+  }
+
+  .footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+    line-height: 2.2;
+    font-weight: 500;
+  }
+
+  .footer a:hover { color: var(--accent); }
+
+  .footer__bottom {
+    text-align: center;
+    padding-top: 36px;
+    margin-top: 40px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+  }
+
+  @media (max-width: 768px) {
+    .footer__grid { grid-template-columns: 1fr; gap: 32px; }
+  }
+</style>
